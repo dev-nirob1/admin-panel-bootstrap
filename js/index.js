@@ -1,3 +1,4 @@
+
 const sidebar = document.querySelector(".sidebar");
 const sidebarToggle = document.querySelector("#sidebarToggle");
 
@@ -52,3 +53,31 @@ new Chart(donutCtx, {
         }
     }
 });
+
+new jsVectorMap({
+    selector: "#visitors-map",
+    map: "world_merc",
+    backgroundColor: "#1b6fff",
+    zoomButtons: true,
+    regionStyle: {
+        initial: {
+            fill: "#fff"
+        },
+        hover: {
+            fill: "#f3f9ec",
+            cursor: "pointer"
+        }
+    },
+    series: {
+        regions: [{
+            attribute: "fill",
+            values: {
+                BD: "#183B56",
+                US: "#2F6B8A",
+                IN: "#2F6B8A",
+                GB: "#2F6B8A"
+            }
+        }]
+    }
+});
+
