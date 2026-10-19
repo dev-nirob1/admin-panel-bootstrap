@@ -143,9 +143,39 @@
 .dashboard-main {
   width: 100%;
 }
+.dashboard-main .content {
+  padding: .5rem;
+}
+
+/* ----------stats card section----------  */
+
+.small-box-icon {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.small-box-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: inherit;
+  text-decoration: none;
+}
+
+.small-box-footer:hover {
+  background: rgba(0, 0, 0, 0.15);
+  color: inherit;
+}
+
+/* ----------stats card section ends----------  */
+
+
 @media (min-width: 992px) {
-    .sidebar {
-      position: static;
-      transform: translateX(0);
-    }
+  .sidebar {
+    position: static;
+    transform: translateX(0);
+  }
 }
