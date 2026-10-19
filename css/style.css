@@ -144,7 +144,7 @@
   width: 100%;
 }
 .dashboard-main .content {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 /* ----------stats card section----------  */
@@ -172,6 +172,10 @@
 
 /* ----------stats card section ends----------  */
 
+/* ----------Sales area chart starts----------  */
+.tab-pane {
+  min-height: 300px;
+}
 
 @media (min-width: 992px) {
   .sidebar {
