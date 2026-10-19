@@ -81,3 +81,86 @@ new jsVectorMap({
     }
 });
 
+// Sales Graph: get the canvas rendering context.
+const salesGraphCanvas = document.querySelector("#salesGraphChart");
+const salesGraphCtx = salesGraphCanvas.getContext("2d");
+
+// Create a subtle gradient for the filled chart area.
+const salesGradient = salesGraphCtx.createLinearGradient(0, 0, 0, 260);
+salesGradient.addColorStop(0, "rgba(255, 255, 255, 0.35)");
+salesGradient.addColorStop(1, "rgba(255, 255, 255, 0.02)");
+
+// Sample monthly sales data.
+const salesGraphData = {
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  datasets: [
+    {
+      label: "Sales",
+      data: [18, 25, 20, 32, 28, 38],
+      borderColor: "#FFFFFF",
+      backgroundColor: salesGradient,
+      fill: true,
+      tension: 0.4,
+      borderWidth: 2,
+      pointRadius: 3,
+      pointHoverRadius: 5,
+      pointBackgroundColor: "#FFFFFF",
+      pointBorderColor: "#FFFFFF"
+    }
+  ]
+};
+
+// Initialize the responsive Sales Graph chart.
+const salesGraphChart = new Chart(salesGraphCtx, {
+  type: "line",
+  data: salesGraphData,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    // Keep tooltips useful when hovering over data points.
+    interaction: {
+      mode: "index",
+      intersect: false
+    },
+
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltip: {
+        backgroundColor: "rgba(24, 59, 86, 0.95)",
+        titleColor: "#FFFFFF",
+        bodyColor: "#FFFFFF",
+        padding: 10,
+        displayColors: false
+      }
+    },
+
+    scales: {
+      x: {
+        grid: {
+          display: false
+        },
+        border: {
+          display: false
+        },
+        ticks: {
+          color: "#FFFFFF"
+        }
+      },
+      y: {
+        beginAtZero: true,
+        grid: {
+          color: "rgba(255, 255, 255, 0.2)"
+        },
+        border: {
+          display: false
+        },
+        ticks: {
+          color: "#FFFFFF"
+        }
+      }
+    }
+  }
+});
