@@ -164,3 +164,23 @@ const salesGraphChart = new Chart(salesGraphCtx, {
     }
   }
 });
+
+
+const calendarEl = document.getElementById("calendar");
+
+const calendar = new FullCalendar.Calendar(calendarEl, {
+  initialView: "dayGridMonth",
+  headerToolbar: {
+    left: "prev,next today",
+    center: "title",
+    right: "dayGridMonth,timeGridWeek,listWeek"
+  },
+  height: "auto",
+  events: [
+    { title: "Team Meeting", start: "2026-10-19" },
+    { title: "Sales Report", start: "2026-10-22" },
+    { title: "Project Review", start: "2026-10-26" }
+  ]
+});
+
+calendar.render();
