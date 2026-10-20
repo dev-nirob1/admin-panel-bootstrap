@@ -184,3 +184,7 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
 });
 
 calendar.render();
+
+
+
+
