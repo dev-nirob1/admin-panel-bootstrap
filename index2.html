@@ -406,7 +406,7 @@
                 <!-- Total Revenue -->
                 <div class="col-12 col-sm-6 col-xl-3">
                   <div
-                    class="d-flex align-items-center justify-content-between border-end border-secondary p-3"
+                    class="d-flex align-items-center justify-content-between border-bottom border-lg-end border-secondary p-3"
                   >
                     <div>
                       <div class="text-success mb-1">
@@ -422,7 +422,7 @@
                 <!-- Total Cost -->
                 <div class="col-12 col-sm-6 col-xl-3">
                   <div
-                    class="d-flex align-items-center justify-content-between border-end border-secondary p-3"
+                    class="d-flex align-items-center justify-content-between border-bottom border-lg-end border-secondary p-3"
                   >
                     <div>
                       <div class="text-danger mb-1">
@@ -438,7 +438,7 @@
                 <!-- Total Profit -->
                 <div class="col-12 col-sm-6 col-xl-3">
                   <div
-                    class="d-flex align-items-center justify-content-between border-end border-secondary p-3"
+                    class="d-flex align-items-center justify-content-between border-bottom border-sm-end border-secondary p-3"
                   >
                     <div>
                       <div class="text-success mb-1">
@@ -465,6 +465,166 @@
                       <small class="text-white-50">GOAL COMPLETIONS</small>
                     </div>
                     <i class="bi bi-people fs-1 text-white-50"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- US Visitors Report -->
+            <div class="row g-3 my-3">
+              <!-- Left Section: 8 Columns -->
+              <div class="col-12 col-lg-8">
+                <div class="row">
+                  <!-- Visitors Map -->
+                  <div class="col-12 col-sm-7">
+                    <div class="card bg-dark text-white border-0">
+                      <div class="card-header bg-dark border-secondary">
+                        <h6 class="mb-0">
+                          <i class="bi bi-globe-americas"></i>
+                          US Visitors Report
+                        </h6>
+                      </div>
+
+                      <div class="card-body">
+                        <div id="us-visitors-map" style="height: 350px"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Visitor Statistics -->
+                  <div class="col-12 col-sm-5 mt-3 mt-md-0">
+                    <div class="d-flex flex-column bg-success text-white">
+                      <!-- Visits -->
+                      <div
+                        class="card bg-success text-white border-0 flex-fill"
+                      >
+                        <div class="card-body">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div>
+                              <p class="small mb-1">Visits</p>
+                              <h4 class="mb-0 fw-bold">8,390</h4>
+                            </div>
+                            <i class="bi bi-eye fs-3 text-info"></i>
+                          </div>
+
+                          <div
+                            class="visitor-sparkline mt-3"
+                            data-values="90,70,90,70,75,80,70"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <!-- Referrals -->
+                      <div
+                        class="card bg-success text-white border-0 flex-fill"
+                      >
+                        <div class="card-body">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div>
+                              <p class="text-white-50 small mb-1">Referrals</p>
+                              <h4 class="mb-0 fw-bold">30%</h4>
+                            </div>
+                            <i class="bi bi-share fs-3 text-warning"></i>
+                          </div>
+
+                          <div
+                            class="visitor-sparkline mt-3"
+                            data-values="90,50,90,70,61,83,63"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <!-- Organic -->
+                      <div
+                        class="card bg-success text-white border-0 flex-fill"
+                      >
+                        <div class="card-body">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div>
+                              <p class="text-white-50 small mb-1">Organic</p>
+                              <h4 class="mb-0 fw-bold">70%</h4>
+                            </div>
+                            <i class="bi bi-search fs-3 text-success"></i>
+                          </div>
+
+                          <div
+                            class="visitor-sparkline mt-3"
+                            data-values="90,50,90,70,61,83,63"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Section: 4 Columns -->
+              <div class="col-12 col-lg-4">
+                <div class="row g-3">
+                  <!-- Inventory -->
+                  <div class="col-12 col-sm-6 col-lg-12">
+                    <div class="rounded bg-info text-white p-3">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h3 class="fw-bold mb-1">5,200</h3>
+                          <p class="mb-0">Inventory</p>
+                        </div>
+                        <i class="bi bi-box-seam fs-1 opacity-50"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mentions -->
+                  <div class="col-12 col-sm-6 col-lg-12">
+                    <div class="rounded bg-success text-white p-3">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h3 class="fw-bold mb-1">92,050</h3>
+                          <p class="mb-0">Mentions</p>
+                        </div>
+                        <i class="bi bi-chat-dots fs-1 opacity-50"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Downloads -->
+                  <div class="col-12 col-sm-6 col-lg-12">
+                    <div class="rounded bg-warning text-dark p-3">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h3 class="fw-bold mb-1">114,381</h3>
+                          <p class="mb-0">Downloads</p>
+                        </div>
+                        <i class="bi bi-download fs-1 opacity-50"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Direct Messages -->
+                  <div class="col-12 col-sm-6 col-lg-12">
+                    <div class="rounded bg-danger text-white p-3">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h3 class="fw-bold mb-1">163,921</h3>
+                          <p class="mb-0">Direct Messages</p>
+                        </div>
+                        <i class="bi bi-envelope fs-1 opacity-50"></i>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
