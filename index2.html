@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <!-- Bootstrap cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- for icon  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- jsvector styles cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/jsvectormap@1.7.0/dist/jsvectormap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FullCalendar CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.3/skeleton.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@7.1.3/theme.css"
+    />
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Admin Panel Layout  -->
+    <div class="dashboard d-flex">
+      <!-- dashboard sidebar  -->
+      <div class="sidebar">
+        <!-- profile  -->
+        <div class="d-flex align-items-center gap-2 py-2">
+          <img
+            class="avater rounded-circle"
+            src="./assets/profile/profile.jpg"
+            alt="profile image"
+          />
+          <h6 class="m-0">Al Hasan Nirob</h6>
+        </div>
+        <hr />
+
+        <!-- navbar links  -->
+        <div class="d-flex flex-column gap-1">
+          <!-- Search Field -->
+          <div class="input-group search-field">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+
+            <button class="btn search-btn" type="button" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+
+          <!-- Sidebar Navigation -->
+          <div class="sidebar-menu mt-3">
+            <!-- Dashboard Toggle -->
+            <a
+              class="sidebar-link d-flex align-items-center justify-content-between active"
+              data-bs-toggle="collapse"
+              href="#dashboardSubmenu"
+              role="button"
+              aria-expanded="false"
+              aria-controls="dashboardSubmenu"
+            >
+              <span>
+                <i class="bi bi-speedometer2 me-2"></i>
+                Dashboard
+              </span>
+
+              <i class="bi bi-chevron-right menu-arrow"></i>
+            </a>
+
+            <!-- Dashboard Submenu -->
+            <div class="collapse" id="dashboardSubmenu">
+              <ul class="submenu">
+                <li>
+                  <a href="./index.html">Dashboard v1</a>
+                </li>
+                <li>
+                  <a href="./index2.html">Dashboard v2</a>
+                </li>
+                <li>
+                  <a href="#">Dashboard v3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <a class="sidebar-link" href="#" role="button">
+            <span> <i class="bi bi-grid me-2"></i> Widgets </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="dashboard-main">
+        <!-- Dashboard Topbar -->
+        <div class="topbar">
+          <nav class="navbar sticky-top bg-white border-bottom">
+            <div class="container-fluid">
+              <!-- Left Side -->
+              <div class="d-flex align-items-center gap-3">
+                <!-- Sidebar Toggle -->
+                <button class="btn" type="button" id="sidebarToggle">
+                  <i class="bi bi-list fs-4"></i>
+                </button>
+
+                <a href="#" class="nav-link"> Home </a>
+
+                <a href="#" class="nav-link">Contact</a>
+              </div>
+
+              <!-- Right Side -->
+              <div class="d-flex align-items-center gap-2">
+                <!-- Search -->
+                <form class="d-none" id="navbarSearch" role="search">
+                  <input
+                    class="form-control form-control-sm"
+                    type="search"
+                    placeholder="Search..."
+                    aria-label="Search"
+                  />
+                </form>
+
+                <button
+                  class="btn"
+                  type="button"
+                  id="searchToggle"
+                  aria-label="Toggle search"
+                >
+                  <i class="bi bi-search fs-5"></i>
+                </button>
+
+                <!-- Messages -->
+                <button
+                  class="btn position-relative"
+                  type="button"
+                  aria-label="Messages"
+                >
+                  <i class="bi bi-chat-dots fs-5"></i>
+                  <span
+                    class="position-absolute top-0 start-70 translate-middle badge rounded-pill bg-success"
+                  >
+                    3
+                  </span>
+                </button>
+
+                <!-- Notifications -->
+                <button
+                  class="btn position-relative"
+                  type="button"
+                  aria-label="Notifications"
+                >
+                  <i class="bi bi-bell fs-5"></i>
+                  <span
+                    class="position-absolute top-0 start-70 translate-middle badge rounded-pill bg-danger"
+                  >
+                    5
+                  </span>
+                </button>
+
+                <!-- Profile -->
+                <button class="btn" type="button" aria-label="Profile">
+                  <i class="bi bi-person-circle fs-5"></i>
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="content bg-secondary">
+          <div class="container-fluid">
+            <!-- Section Title -->
+            <div
+              class="text-white d-flex flex-wrap align-items-center justify-content-between gap-3"
+            >
+              <h2 class="mb-0">Dashboard</h2>
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb m-0">
+                  <li class="breadcrumb-item underline-0">
+                    <a href="#">Home</a>
+                  </li>
+                  <li
+                    class="breadcrumb-item active text-white"
+                    aria-current="page"
+                  >
+                    Dashboard V2
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <!-- Section Title End  -->
+
+            <div class="row g-3 my-3">
+              <div class="row g-3">
+                <!-- CPU Traffic Info Box -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div
+                    class="rounded d-flex align-items-center gap-3 p-2 bg-dark text-white"
+                  >
+                    <!-- Colored icon area -->
+                    <div class="text-white bg-info rounded py-2 px-3">
+                      <i class="bi bi-cpu fs-2"></i>
+                    </div>
+
+                    <!-- Information area -->
+                    <div>
+                      <div class="small text-uppercase">CPU Traffic</div>
+                      <div class="fs-4 fw-bold m-0">10 <small>%</small></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Likes Info Box -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div
+                    class="rounded d-flex align-items-center gap-3 p-2 bg-dark text-white"
+                  >
+                    <!-- Colored icon area -->
+                    <div class="text-white bg-danger rounded py-2 px-3">
+                      <i class="bi bi-hand-thumbs-up fs-2"></i>
+                    </div>
+
+                    <!-- Information area -->
+                    <div>
+                      <div class="small text-uppercase">Likes</div>
+                      <div class="fs-4 fw-bold m-0">41,410</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sales Info Box -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div
+                    class="rounded d-flex align-items-center gap-3 p-2 bg-dark text-white"
+                  >
+                    <!-- Colored icon area -->
+                    <div class="text-white bg-success rounded py-2 px-3">
+                      <i class="bi bi-cart-check fs-2"></i>
+                    </div>
+
+                    <!-- Information area -->
+                    <div>
+                      <div class="small text-uppercase">Sales</div>
+                      <div class="fs-4 fw-bold m-0">760</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- New Members Info Box -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div
+                    class="rounded d-flex align-items-center gap-3 p-2 bg-dark text-white"
+                  >
+                    <!-- Colored icon area -->
+                    <div class="text-dark bg-warning rounded py-2 px-3">
+                      <i class="bi bi-people fs-2"></i>
+                    </div>
+
+                    <!-- Information area -->
+                    <div>
+                      <div class="small text-uppercase">New Members</div>
+                      <div class="fs-4 fw-bold m-0">2,000</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap CDN  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jsvectormap cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.7.0/dist/jsvectormap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.7.0/dist/maps/world-merc.js"></script>
+    <!-- chart.js cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- FullCalendar Core -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.3/all/global.js"></script>
+
+    <!-- Bootstrap 5 Theme -->
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@7.1.3/global.js"></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
