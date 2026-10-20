@@ -107,16 +107,18 @@
           </a>
         </div>
       </div>
+      <!-- overlay -->
+      <div class="overlay d-none"></div>
 
       <div class="dashboard-main">
         <!-- Dashboard Topbar -->
-        <div class="topbar">
+        <div class="topbar p-1">
           <nav class="navbar sticky-top bg-white border-bottom">
             <div class="container-fluid">
               <!-- Left Side -->
-              <div class="d-flex align-items-center gap-3">
+              <div class="d-flex align-items-center gap-2">
                 <!-- Sidebar Toggle -->
-                <button class="btn" type="button" id="sidebarToggle">
+                <button class="btn d-lg-none" type="button" id="sidebarToggle">
                   <i class="bi bi-list fs-4"></i>
                 </button>
 
@@ -126,7 +128,7 @@
               </div>
 
               <!-- Right Side -->
-              <div class="d-flex align-items-center gap-2">
+              <div class="d-flex align-items-center gap-2 gap-lg-3">
                 <!-- Search -->
                 <form class="d-none" id="navbarSearch" role="search">
                   <input
@@ -561,6 +563,7 @@
     <!-- Bootstrap 5 Theme -->
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@7.1.3/global.js"></script>
 
+    <script src="./js/index.js"></script>
     <script src="./js/index3.js"></script>
   </body>
 </html>

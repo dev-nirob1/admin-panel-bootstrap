@@ -1,9 +1,15 @@
-
 const sidebar = document.querySelector(".sidebar");
 const sidebarToggle = document.querySelector("#sidebarToggle");
+const overlay = document.querySelector(".overlay");
 
 sidebarToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("open-sidebar");
+  sidebar.classList.toggle("open-sidebar");
+  overlay.classList.toggle("d-none");
+});
+
+overlay.addEventListener("click", () => {
+  sidebar.classList.remove("open-sidebar");
+  overlay.classList.add("d-none");
 });
 
 

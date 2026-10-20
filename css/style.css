@@ -46,6 +46,7 @@
   --transition: all 0.25s ease;
 }
 
+
 .sidebar {
   background-color: var(--sidebar-bg);
   min-width: var(--sidebar-width);
@@ -57,11 +58,20 @@
   position: absolute;
   transform: translateX(-100%);
   transition: all 0.3s ease;
+  z-index: 10001 !important;
 }
+
 
 .sidebar.open-sidebar {
   z-index: 10000;
   transform: translateX(0);
+}
+
+.overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
 }
 
 .sidebar .avater {
@@ -140,6 +150,11 @@
   background: var(--secondary);
   color: var(--text-light);
 }
+
+.topbar .btn{
+padding: .2rem;
+}
+
 .dashboard-main {
   width: 100%;
 }
